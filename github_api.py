@@ -17,6 +17,7 @@ def pretty_print(response):
     Print the request URL, status code, headers and body of a HTTP response.
 
     :param response: A HTTP response.
+    :type response: requests.Response
     """
 
     print("---URL---")
@@ -51,7 +52,7 @@ def compare(response1, response2):
         * Headers
         * Body
 
-    of the responses. For HTTP headers and bodys that contain a JSON object
+    of the responses. For HTTP headers - and bodies that contain a JSON object -
     it will additionally differentiate between
         * Equal headers (Header type and Header payload is equal)
         * Common headers (Header type is equal, payload is different)
@@ -61,12 +62,14 @@ def compare(response1, response2):
 
     :param response1: HTTP response 1.
     :param response2: HTTP response 2.
+    :type response1: requests.Response
+    :type response2: requests.Response
     """
 
     print("---URLs---")
     print("Equal?:", response1.url == response2.url)
-    print("Request 1:", response1.url)
-    print("Request 2:", response2.url)
+    print("Response 1:", response1.url)
+    print("Response 2:", response2.url)
     print()
 
     print("---Status Codes---")
