@@ -1,2 +1,1 @@
-# github_api_experiments
-Experiments with the Github REST API
+Tests for the Github REST API
